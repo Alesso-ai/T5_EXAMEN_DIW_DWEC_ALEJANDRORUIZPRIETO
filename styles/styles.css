@@ -1,39 +1,114 @@
-
-*{
-        margin: 0;
-        padding: 0;
+:root {
+  --h1-font-size: 6rem;
+  --span-font-size: 2.5rem;
+  --h1-color: #0b0a0a;
+  --span-color: #040404;
+  --button-color: #ffa600;
+  --height-hero-image: 80dvh;
 }
 
-.container {
-    width: 50%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
+@media screen and (max-width: 1024px) {
+  :root {
+    --h1-font-size: 6rem;
+    --span-font-size: 2.5rem;
+    --h1-color: #ffffff;
+    --span-color: #ffffff;
+    --button-color: #ffa600;
+    --height-hero-image: 60dvh;
+  }
 }
 
-.main-form {
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    background-color: rgb(232, 232, 232);
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.main-inputs {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.errores {
+  color: red;
+  font-size: 0.8rem;
+  font-weight: italic;
+}
+
+.main-container-hero {
+  background: url(../assets/imgs/Optimus.jpg) no-repeat center center/cover;
+  height: var(--height-hero-image);
+  clip-path: polygon(0 0, 100% 0%, 100% 74%, 0 60%);
+  position: relative;
+}
+
+.main-container-hero::before {
+  content: "";
+  background: whitesmoke;
+  height: 100dvh;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+
+.hero-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-body h1,
+.hero-body span {
+  margin: 0;
+}
+
+.hero-body h1 {
+  font-size: var(--h1-font-size);
+  color: var(--h1-color);
+  margin: 0;
+}
+
+.hero-body span {
+  max-width: 80%;
+  margin-top: 1rem;
+  font-size: var(--span-font-size);
+  color: var(--span-color);
+}
+
+.main-container-form {
+  content: "";
+  height: 100dvh;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+input {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  width: 20rem;
+  text-align: center;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif;
-    background-color: rgb(5, 45, 32);
+  background-color: beige;
 }
