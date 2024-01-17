@@ -8,8 +8,24 @@
     <link rel="shortcut icon" href="assets/Favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <fieldset>
+    <div class="container">
+        <div class="main-form">
+            <h1></h1>
+            <form action="templates/envioCorrecto.html" method="get">
+               <div class="main-inputs">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name" placeholder="Nombre" >
+                    <label for="email">Correo</label>
+                    <input type="email" name="email" id="email" placeholder="Correo">
+                    <input type="radio" name="Boton" id="botonRadio">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
+      </fieldset>
 
-    
+
     
     <script src="js/script.js"></script>
 </body>
